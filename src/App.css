@@ -1,38 +1,166 @@
-.App {
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 2.5vw;
+  padding: 40px;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 5vw;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+button {
+  border-radius: 40px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+  background: #fff;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+i {
+  font-size: 1.5vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  text-decoration: none;
+  color: #868686;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  font-weight: 800;
+  color: #ec6f4d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boundary {
+  width: 60%;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.sunny {
+  background-color: #eafdff;
+}
+
+.cloudy {
+  background-color: #fafafa;
+}
+
+.night {
+  background-color: #e4d8e1;
+}
+
+.search .today {
+  padding: 40px;
+}
+
+.today-date {
+  font-weight: normal;
+  font-size: 2vw;
+}
+
+.main-icon {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.today-temp {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.degreeUnit {
+  font-size: 2vw;
+}
+
+.today-summary {
+  list-style: none;
+  font-size: 1.05vw;
+  padding: 0;
+}
+
+.search {
+  padding-bottom: 20px;
+  font-size: 1.75vw;
+}
+
+.row {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.today {
+  text-align: left;
+}
+
+.day {
+  display: block;
+  font-size: 1.75vw;
+}
+
+.weekly-temps {
+  font-size: 1.75vw;
+}
+
+.signature {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.active:hover {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-forecast-temperatures {
+  font-size: 1.5vw;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}
+
+.weather-forecast-temperature-min {
+  font-weight: 300;
+}
+
+.weather-forecast-date {
+  font-size: 1.5vw;
+}
+
+.sig-link:hover {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  background-clip: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

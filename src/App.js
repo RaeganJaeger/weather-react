@@ -1,12 +1,12 @@
 //import axios from "axios";
+import Container from "./Container";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello World</p>
-      </header>
+      <Container />
     </div>
   );
 }
