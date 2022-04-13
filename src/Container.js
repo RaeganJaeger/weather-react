@@ -5,7 +5,7 @@ export default function Container() {
   return (
     <div className="boundary" id="box-color">
       <Search />
-      <Header />
+      <br /> <Header />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search() {
-  const [city, setCity] = useState("");
+export default function Search(props) {
+  const [city, setCity] = useState("Minneapolis");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState("");
 
@@ -36,26 +36,27 @@ export default function Search() {
         onChange={updateCity}
         placeholder="Enter a city..."
       />{" "}
-      <button type="submit" value="Search" />
+      <button type="submit" value="Search">
+        Search
+      </button>
     </form>
   );
 
-  if (loaded) {
-    return (
-      <div>
-        {form}
-        <ul>
-          <li>Temperature: {Math.round(weather.temp)}° F</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity} %</li>
-          <li>Wind: {weather.wind} mph</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
-      </div>
-    );
-  } else {
-    return form;
-  }
+  // if (loaded) {
+  //return (
+  //<div>
+  // {form}
+  // <ul>
+  //   <li>Temperature: {Math.round(weather.temp)}° F</li>
+  //    <li>Description: {weather.description}</li>
+  //   <li>Humidity: {weather.humidity} %</li>
+  //   <li>Wind: {weather.wind} mph</li>
+  //   <li>
+  //    <img src={weather.icon} alt={weather.description} />
+  //   </li>
+  // </ul>
+  // </div>
+  // );
+  // } else {
+  return <div>{form}</div>;
 }

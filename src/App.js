@@ -1,4 +1,5 @@
 //import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "./Container";
 
 import "./App.css";
