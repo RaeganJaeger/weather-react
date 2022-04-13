@@ -8,6 +8,12 @@ function App() {
   return (
     <div className="App">
       <Container />
+      <p className="footer">
+        <a href="https://github.com/RaeganJaeger/weather-react">
+          Opensource code
+        </a>{" "}
+        by Raegan Jaeger
+      </p>
     </div>
   );
 }
