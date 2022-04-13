@@ -30,11 +30,18 @@ export default function Header() {
             </span>
             <ul className="today-summary">
               <li>
-                <a href="" id="fahrenheit-link" className="active">
+                <a
+                  href="https://epic-colden-a184c0.netlify.app/"
+                  id="fahrenheit-link"
+                  className="active"
+                >
                   F
                 </a>{" "}
                 |{" "}
-                <a href="" id="celsius-link">
+                <a
+                  href="https://epic-colden-a184c0.netlify.app/"
+                  id="celsius-link"
+                >
                   C
                 </a>
               </li>
