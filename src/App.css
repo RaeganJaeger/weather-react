@@ -78,10 +78,11 @@ a:hover {
   font-size: 2vw;
 }
 
-.main-icon {
+.Weather canvas {
   margin: 0 auto;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .today-temp {
