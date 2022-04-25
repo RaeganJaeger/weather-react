@@ -1,19 +1,21 @@
 //import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "./Container";
 
 import "./App.css";
+//import Weather from "./Weather";
 
 function App() {
   return (
     <div className="App">
-      <Container />
-      <p className="footer">
-        <a href="https://github.com/RaeganJaeger/weather-react">
-          Opensource code
-        </a>{" "}
-        by Raegan Jaeger
-      </p>
+      <div className="container">
+        <Container />
+        <p className="footer">
+          <a href="https://github.com/RaeganJaeger/weather-react">
+            Opensource code
+          </a>{" "}
+          by Raegan Jaeger
+        </p>
+      </div>
     </div>
   );
 }

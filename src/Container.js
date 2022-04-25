@@ -1,11 +1,12 @@
 import Search from "./Search";
-import Header from "./Header";
+import Weather from "./Weather";
 
 export default function Container() {
   return (
     <div className="boundary" id="box-color">
       <Search />
-      <br /> <Header />
+      <br />
+      <Weather defaultCity="Minneapolis" />
     </div>
   );
 }

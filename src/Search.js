@@ -35,6 +35,7 @@ export default function Search(props) {
         type="search"
         onChange={updateCity}
         placeholder="Enter a city..."
+        autoFocus="on"
       />{" "}
       <button type="submit" value="Search">
         Search
