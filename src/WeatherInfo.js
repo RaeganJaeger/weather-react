@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -19,30 +20,9 @@ export default function WeatherInfo(props) {
           <WeatherIcon code={props.data.icon} />
         </div>
         <div className="col-6">
-          <span className="today-temp" id="today-temp">
-            {Math.round(props.data.temp)}
-          </span>{" "}
-          °
-          <span id="degreeUnit" className="degreeUnit">
-            F
-          </span>
+          <WeatherTemperature fahrenheit={props.data.temp} />
+
           <ul className="today-summary">
-            <li>
-              <a
-                href="https://epic-colden-a184c0.netlify.app/"
-                id="fahrenheit-link"
-                className="active"
-              >
-                F
-              </a>{" "}
-              |{" "}
-              <a
-                href="https://epic-colden-a184c0.netlify.app/"
-                id="celsius-link"
-              >
-                C
-              </a>
-            </li>
             <li>
               <strong>Today:</strong>{" "}
               <span id="description" className="text-capitalize">
