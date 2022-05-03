@@ -1,5 +1,14 @@
 .WeatherForecast {
   text-align: center;
+  font-family: "Varela Round", Sans-Serif;
+}
+
+.WeatherForecast-day {
+  font-size: 1rem;
+}
+
+.WeatherForecast-temps {
+  font-size: 0.75rem;
 }
 
 .WeatherForecast-temp-min {

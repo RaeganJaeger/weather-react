@@ -1,15 +1,22 @@
-h1 {
-  font-family: "Rubik", sans-serif;
+.WeatherInfo {
+  font-family: "Varela Round", Sans-Serif;
+}
+
+.WeatherInfo h1 {
   font-size: 5vw;
   font-weight: normal;
   margin-bottom: 0;
 }
 
-ul {
-  list-style: none;
-  font-size: 1vw;
+.WeatherInfo .today-date {
+  font-family: "Noto Serif", Serif;
 }
 
-.today-summary {
+.WeatherInfo ul {
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+.WeatherInfo .today-summary {
   padding: 0px;
 }

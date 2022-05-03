@@ -8,12 +8,10 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h1 id="city-header">
-        <span className="city" id="city">
-          {props.data.city}
-        </span>
-        <span className="country" id="country"></span>
+        <span className="city">{props.data.city}</span>
+        <span className="country"></span>
       </h1>
-      <div className="today-date" id="today-date">
+      <div className="today-date">
         <FormattedDate date={props.data.date} />
       </div>
       <div className="row today">
@@ -25,18 +23,13 @@ export default function WeatherInfo(props) {
 
           <ul className="today-summary">
             <li>
-              <strong>Today:</strong>{" "}
-              <span id="description" className="text-capitalize">
-                {props.data.description}
-              </span>
+              <strong>Today:</strong> <span>{props.data.description}</span>
             </li>
             <li>
-              <strong>Humidity:</strong>{" "}
-              <span id="humidity">{props.data.humidity}</span>%
+              <strong>Humidity:</strong> <span>{props.data.humidity}</span>%
             </li>
             <li>
-              <strong>Wind:</strong> <span id="wind">{props.data.wind}</span>{" "}
-              mph
+              <strong>Wind:</strong> <span>{props.data.wind}</span> mph
             </li>
           </ul>
         </div>
