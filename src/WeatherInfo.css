@@ -9,6 +9,16 @@
   padding: 10px 0px 0px 0px;
 }
 
+strong {
+  font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+  .WeatherInfo h1 {
+    font-size: 7vw;
+  }
+}
+
 .WeatherInfo .today-date {
   font-family: "Noto Serif", Serif;
   font-size: 0.9rem;
@@ -29,4 +39,17 @@
 
 .WeatherInfo .main-icon {
   padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .WeatherInfo .main-icon {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .WeatherInfo .current-weather {
+    padding-left: 20px;
+    padding-top: 15px;
+  }
 }

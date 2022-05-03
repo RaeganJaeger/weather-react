@@ -21,19 +21,21 @@ export default function WeatherInfo(props) {
           </span>
         </div>
         <div className="col-6">
-          <WeatherTemperature fahrenheit={props.data.temp} />
+          <div className="current-weather">
+            <WeatherTemperature fahrenheit={props.data.temp} />
 
-          <ul className="today-summary">
-            <li>
-              <strong>Today:</strong> <span>{props.data.description}</span>
-            </li>
-            <li>
-              <strong>Humidity:</strong> <span>{props.data.humidity}</span>%
-            </li>
-            <li>
-              <strong>Wind:</strong> <span>{props.data.wind}</span> mph
-            </li>
-          </ul>
+            <ul className="today-summary">
+              <li>
+                <strong>Today:</strong> <span>{props.data.description}</span>
+              </li>
+              <li>
+                <strong>Humidity:</strong> <span>{props.data.humidity}</span>%
+              </li>
+              <li>
+                <strong>Wind:</strong> <span>{props.data.wind}</span> mph
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

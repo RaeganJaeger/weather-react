@@ -3,8 +3,20 @@
   font-weight: bold;
 }
 
+@media (max-width: 600px) {
+  .today-temp {
+    font-size: 5vw;
+  }
+}
+
 .degree-unit {
   font-size: 2vw;
+}
+
+@media (max-width: 600px) {
+  .degree-unit {
+    font-size: 3vw;
+  }
 }
 
 .unit-link {
