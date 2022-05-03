@@ -1,8 +1,6 @@
-//import axios from "axios";
 import Container from "./Container";
 
 import "./App.css";
-//import Weather from "./Weather";
 
 function App() {
   return (

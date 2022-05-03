@@ -1,6 +1,11 @@
+body {
+  background: #f9f7fe;
+}
+
 .App {
   max-width: 500px;
-  margin: 60px auto;
+  margin: 0 auto;
+  padding-top: 25px;
 }
 
 .App .footer {
@@ -12,13 +17,11 @@
 
 .App .footer a {
   text-decoration: none;
+  font-family: "Varela Round", Sans-Serif;
   font-weight: bolder;
   color: #000;
 }
 
 .App .footer a:hover {
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
-  background-clip: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }

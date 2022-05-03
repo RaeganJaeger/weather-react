@@ -5,6 +5,7 @@
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: #fff;
 }
 
 .Weather button {
@@ -19,15 +20,11 @@
 }
 
 .Weather button:hover {
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
   color: #000;
+  background-color: #fff;
   font-weight: bolder;
 }
 
 .forecast-grid {
   padding-top: 30px;
-}
-
-.weather-info {
-  padding-top: 40px;
 }
