@@ -10,14 +10,14 @@ function App() {
       <div className="container">
         <Container />
         <p className="footer">
+          Opensource code by{" "}
           <a
             href="https://github.com/RaeganJaeger/weather-react"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Opensource code
-          </a>{" "}
-          by Raegan Jaeger
+            Raegan Jaeger
+          </a>
         </p>
       </div>
     </div>

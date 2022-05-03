@@ -7,7 +7,7 @@ import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1 id="city-header">
+      <h1>
         <span className="city">{props.data.city}</span>
         <span className="country"></span>
       </h1>
@@ -16,7 +16,9 @@ export default function WeatherInfo(props) {
       </div>
       <div className="row today">
         <div className="col-4">
-          <WeatherIcon code={props.data.icon} size={75} />
+          <span className="main-icon">
+            <WeatherIcon code={props.data.icon} size={100} />
+          </span>
         </div>
         <div className="col-6">
           <WeatherTemperature fahrenheit={props.data.temp} />

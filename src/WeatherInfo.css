@@ -6,10 +6,12 @@
   font-size: 5vw;
   font-weight: normal;
   margin-bottom: 0;
+  padding: 10px 0px 0px 0px;
 }
 
 .WeatherInfo .today-date {
   font-family: "Noto Serif", Serif;
+  font-size: 0.9rem;
 }
 
 .WeatherInfo ul {
@@ -19,4 +21,13 @@
 
 .WeatherInfo .today-summary {
   padding: 0px;
+}
+
+.WeatherInfo .row {
+  padding-top: 20px;
+}
+
+.WeatherInfo .main-icon {
+  text-align: center;
+  padding-left: 20px;
 }

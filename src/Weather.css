@@ -1,5 +1,6 @@
 .Weather {
   border-radius: 10px;
+  font-family: "Varela Round", Sans-Serif;
   padding: 25px;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -18,6 +19,15 @@
 }
 
 .Weather button:hover {
-  background: #fff;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
   color: #000;
+  font-weight: bolder;
+}
+
+.forecast-grid {
+  padding-top: 30px;
+}
+
+.weather-info {
+  padding-top: 40px;
 }

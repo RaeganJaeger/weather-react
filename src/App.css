@@ -4,8 +4,21 @@
 }
 
 .App .footer {
+  font-family: "Noto Serif", Serif;
   text-align: center;
-  font-weight: lighter;
-  font-size: 1.5vw;
+  font-size: 0.75rem;
   margin-top: 15px;
+}
+
+.App .footer a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #000;
+}
+
+.App .footer a:hover {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  background-clip: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/024/774/original/brightcolors.gif?1642015243);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
