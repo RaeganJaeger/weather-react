@@ -9,3 +9,7 @@ ul {
   list-style: none;
   font-size: 1vw;
 }
+
+.today-summary {
+  padding: 0px;
+}

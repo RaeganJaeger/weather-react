@@ -10,7 +10,11 @@ function App() {
       <div className="container">
         <Container />
         <p className="footer">
-          <a href="https://github.com/RaeganJaeger/weather-react">
+          <a
+            href="https://github.com/RaeganJaeger/weather-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Opensource code
           </a>{" "}
           by Raegan Jaeger
