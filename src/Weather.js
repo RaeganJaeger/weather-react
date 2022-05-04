@@ -17,8 +17,10 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
       icon: response.data.weather[0].icon,
     });
+    //console.log(response.data);
   }
 
   function search() {
