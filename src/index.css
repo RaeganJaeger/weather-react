@@ -1,4 +1,13 @@
 body {
   background-image: url(media/background-image.png);
   background-repeat: no-repeat;
+  background-size: auto;
+}
+
+@media (min-height: 400px) {
+  body {
+    background-image: url(media/background-image.png);
+    background-repeat: no-repeat;
+    background-size: auto 1400px;
+  }
 }
