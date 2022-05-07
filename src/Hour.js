@@ -12,18 +12,40 @@ export default function Hour(props) {
   }
 
   function hour() {
-    let hour = props.data.dt;
-    console.log(hour);
-    //let utcHours = hour.getUTCHours();
+    let utc = props.data.dt;
+    let utcHour = utc;
+    console.log(utcHour);
 
-    let hours = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
-    return hours[hour];
+    let utcHours = [
+      "Sun",
+      "Mon",
+      "Tues",
+      "Wed",
+      "Thur",
+      "Fri",
+      "Sat",
+      "Sun",
+      "Mon",
+      "Tues",
+      "Wed",
+      "Thur",
+      "Fri",
+      "Sat",
+      "Sun",
+      "Mon",
+      "Tues",
+      "Wed",
+      "Thur",
+      "Fri",
+      "Sat",
+    ];
+    return utcHours[utcHour];
   }
 
   return (
     <div className="WeatherHour">
       <div className="WeatherHour">{hour()}</div>
-      <WeatherIcon code={props.data.weather[0].icon} size={30} />
+      <WeatherIcon code={props.data.weather[0].icon} size={20} />
       <div className="WeatherHour-temps">
         <span className="WeatherHour-temp-max">{hourlyTemp()}°</span>
       </div>
