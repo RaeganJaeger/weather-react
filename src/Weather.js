@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import HourlyForecast from "./HourlyForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -56,6 +57,9 @@ export default function Weather(props) {
         </form>
 
         <WeatherInfo data={weatherData} />
+        <div className="hourly-grid">
+          <HourlyForecast coordinates={weatherData.coordinates} />
+        </div>
         <div className="forecast-grid">
           <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
