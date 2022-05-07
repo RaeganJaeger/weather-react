@@ -4,8 +4,11 @@ export default function LocalTime(props) {
   let utc = new Date();
   let utcHours = utc.getUTCHours();
   let timezone = props.timezone / 3600;
-  let minutes = props.date.getMinutes();
   let city = props.city;
+  let minutes = props.date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   let currentTime = utcHours + timezone;
   if (currentTime <= 0) {
