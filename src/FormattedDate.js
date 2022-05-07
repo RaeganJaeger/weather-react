@@ -25,9 +25,6 @@ export default function FormattedDate(props) {
     "December",
   ];
 
-  //const utcMilllisecondsSinceEpoch =
-  // props.date.getTime() + props.date.getTimezoneOffset() * 60 * 1000;
-  //const utcTime = Math.round(utcMilllisecondsSinceEpoch / 1000);
   let day = days[props.date.getDay()];
   let month = months[props.date.getMonth()];
   let date = props.date.getDate();

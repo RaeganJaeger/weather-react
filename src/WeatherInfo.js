@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import LocalTime from "./LocalTime";
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
@@ -25,6 +26,13 @@ export default function WeatherInfo(props) {
             <WeatherTemperature fahrenheit={props.data.temp} />
 
             <ul className="today-summary">
+              <li>
+                <LocalTime
+                  date={props.data.date}
+                  city={props.data.city}
+                  timezone={props.data.timezone}
+                />
+              </li>
               <li>
                 <strong>Today:</strong> <span>{props.data.description}</span>
               </li>

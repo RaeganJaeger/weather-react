@@ -19,6 +19,7 @@ export default function Weather(props) {
       city: response.data.name,
       country: response.data.sys.country,
       icon: response.data.weather[0].icon,
+      timezone: response.data.timezone,
     });
     //console.log(response.data);
   }
