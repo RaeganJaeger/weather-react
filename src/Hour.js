@@ -11,25 +11,21 @@ export default function Hour(props) {
     return `${temperature}`;
   }
 
-  function hour() {
+  function timezoneHour() {
     let utc = Math.round(Date.now() / 1000);
     // current UTC time (seconds)
-    console.log(utc);
+    // console.log(utc);
     let utcHours = props.data.dt;
-    console.log(utcHours);
+    //console.log(utcHours);
     let uctHourDifference = (utcHours - utc) / 3600;
     // future UTC time (seconds)
     let hours = Math.round(uctHourDifference);
-    console.log(hours);
+    // console.log(hours);
 
-    //   return futureHours[hours];
-  }
-
-  function timezoneHours() {
     let currentUtcTime = new Date();
     let currentUtcHours = currentUtcTime.getUTCHours();
     let timezone = props.timezoneData / 3600;
-    console.log(timezone);
+    //console.log(timezone);
 
     let currentTime = currentUtcHours + timezone;
     if (currentTime <= 0) {
@@ -44,7 +40,27 @@ export default function Hour(props) {
       adjustedCurrentTime = `${adjustedCurrentTime}`;
       //am
     }
-    return <div>{adjustedCurrentTime}</div>;
+
+    let futureHours = [
+      adjustedCurrentTime,
+      adjustedCurrentTime + 1,
+      adjustedCurrentTime + 2,
+      adjustedCurrentTime + 3,
+      adjustedCurrentTime + 4,
+      adjustedCurrentTime + 5,
+      adjustedCurrentTime + 6,
+      adjustedCurrentTime + 7,
+      adjustedCurrentTime + 8,
+      adjustedCurrentTime + 9,
+      adjustedCurrentTime + 10,
+      adjustedCurrentTime + 11,
+      adjustedCurrentTime + 12,
+    ];
+    //if (futureHours[hours] > 12) {
+    // return futureHours[hours] - 12 + `am`;
+    // } else {
+    return futureHours[hours];
+    // }
   }
 
   // get current local time
@@ -53,9 +69,7 @@ export default function Hour(props) {
 
   return (
     <div className="WeatherHour">
-      <div className="WeatherHour">
-        {hour()} {timezoneHours()}
-      </div>
+      <div className="WeatherHour">{timezoneHour()}</div>
       <WeatherIcon code={props.data.weather[0].icon} size={20} />
       <div className="WeatherHour-temps">
         <span className="WeatherHour-temp-max">{hourlyTemp()}°</span>
