@@ -35,7 +35,7 @@ export default function HourlyForecast(props) {
             if (index < 6) {
               return (
                 <div className="col" key={index}>
-                  <Hour data={hourlyForecast} />
+                  <Hour data={hourlyForecast} timezoneData={props.timezone} />
                 </div>
               );
             } else {

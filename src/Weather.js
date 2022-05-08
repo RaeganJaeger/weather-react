@@ -58,7 +58,11 @@ export default function Weather(props) {
 
         <WeatherInfo data={weatherData} />
         <div className="hourly-grid">
-          <HourlyForecast coordinates={weatherData.coordinates} />
+          <HourlyForecast
+            coordinates={weatherData.coordinates}
+            data={weatherData}
+            timezone={weatherData.timezone}
+          />
         </div>
         <div className="forecast-grid">
           <WeatherForecast coordinates={weatherData.coordinates} />

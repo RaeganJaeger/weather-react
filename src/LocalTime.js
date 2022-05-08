@@ -23,6 +23,7 @@ export default function LocalTime(props) {
     adjustedCurrentTime = `${adjustedCurrentTime}:${minutes}am`;
     //am
   }
+
   return (
     <div>
       <strong>{city} Time:</strong> {adjustedCurrentTime}
