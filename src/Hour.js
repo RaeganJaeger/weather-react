@@ -12,34 +12,15 @@ export default function Hour(props) {
   }
 
   function hour() {
-    let utc = props.data.dt;
-    let utcHour = utc;
-    console.log(utcHour);
-
-    let utcHours = [
-      "Sun",
-      "Mon",
-      "Tues",
-      "Wed",
-      "Thur",
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tues",
-      "Wed",
-      "Thur",
-      "Fri",
-      "Sat",
-      "Sun",
-      "Mon",
-      "Tues",
-      "Wed",
-      "Thur",
-      "Fri",
-      "Sat",
-    ];
-    return utcHours[utcHour];
+    let Utc = Math.round(Date.now() / 1000);
+    // current UTC time (seconds)
+    console.log(Utc);
+    let utcHours = props.data.dt;
+    console.log(utcHours);
+    let uctHourDifference = (utcHours - Utc) / 3600;
+    // future UTC time (seconds)
+    let hours = Math.round(uctHourDifference);
+    console.log(hours);
   }
 
   return (

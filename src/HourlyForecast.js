@@ -32,7 +32,7 @@ export default function HourlyForecast(props) {
       <div className="HourlyForecast">
         <div className="row">
           {hourlyForecast.map(function (hourlyForecast, index) {
-            if (index !== 0 && index < 9) {
+            if (index < 6) {
               return (
                 <div className="col" key={index}>
                   <Hour data={hourlyForecast} />
