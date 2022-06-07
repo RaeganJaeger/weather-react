@@ -2,10 +2,6 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function Hour(props) {
-  //Time
-  //icon
-  //max temp
-
   function hourlyTemp() {
     let temperature = Math.round(props.data.temp);
     return `${temperature}`;
@@ -19,7 +15,7 @@ export default function Hour(props) {
     //console.log(utcHours);
     let uctHourDifference = (utcHours - utc) / 3600;
     // future UTC time (seconds)
-    let hours = Math.round(uctHourDifference);
+    let hours = Math.floor(uctHourDifference);
     // console.log(hours);
 
     let currentUtcTime = new Date();
@@ -28,21 +24,20 @@ export default function Hour(props) {
     //console.log(timezone);
 
     let currentTime = currentUtcHours + timezone;
-    if (currentTime <= 0) {
+    if (currentTime < 0) {
       currentTime = currentTime + 24;
     }
-
     let adjustedCurrentTime = currentTime;
+
+    if (adjustedCurrentTime === 0) {
+      adjustedCurrentTime = 12;
+    }
     if (adjustedCurrentTime > 12) {
       adjustedCurrentTime = adjustedCurrentTime - 12;
-      //pm
-    } else {
-      adjustedCurrentTime = `${adjustedCurrentTime}`;
-      //am
     }
 
     let futureHours = [
-      adjustedCurrentTime,
+      "Now",
       adjustedCurrentTime + 1,
       adjustedCurrentTime + 2,
       adjustedCurrentTime + 3,
@@ -56,11 +51,11 @@ export default function Hour(props) {
       adjustedCurrentTime + 11,
       adjustedCurrentTime + 12,
     ];
-    //if (futureHours[hours] > 12) {
-    // return futureHours[hours] - 12 + `am`;
-    // } else {
     return futureHours[hours];
-    // }
+  }
+
+  function displayHourlyTime() {
+    return timezoneHour();
   }
 
   // get current local time
@@ -69,7 +64,7 @@ export default function Hour(props) {
 
   return (
     <div className="WeatherHour">
-      <div className="WeatherHour">{timezoneHour()}</div>
+      <div className="WeatherHour">{displayHourlyTime()}</div>
       <WeatherIcon code={props.data.weather[0].icon} size={20} />
       <div className="WeatherHour-temps">
         <span className="WeatherHour-temp-max">{hourlyTemp()}°</span>

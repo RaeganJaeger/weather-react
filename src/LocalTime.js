@@ -9,24 +9,30 @@ export default function LocalTime(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let meridianLabel = "";
 
   let currentTime = utcHours + timezone;
-  if (currentTime <= 0) {
+  if (currentTime < 0) {
     currentTime = currentTime + 24;
   }
-
   let adjustedCurrentTime = currentTime;
-  if (adjustedCurrentTime > 12) {
-    adjustedCurrentTime = adjustedCurrentTime - 12 + `:${minutes}pm`;
-    //pm
+
+  if (adjustedCurrentTime < 12) {
+    meridianLabel = "am";
   } else {
-    adjustedCurrentTime = `${adjustedCurrentTime}:${minutes}am`;
-    //am
+    meridianLabel = "pm";
+  }
+  if (adjustedCurrentTime === 0) {
+    adjustedCurrentTime = 12;
+  }
+  if (adjustedCurrentTime > 12) {
+    adjustedCurrentTime = adjustedCurrentTime - 12;
   }
 
   return (
     <div>
-      <strong>{city} Time:</strong> {adjustedCurrentTime}
+      <strong>{city} Time:</strong> {adjustedCurrentTime}:{minutes}{" "}
+      {meridianLabel}
     </div>
   );
 }
