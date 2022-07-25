@@ -32,9 +32,9 @@ export default function HourlyForecast(props) {
       <div className="HourlyForecast">
         <div className="row">
           {hourlyForecast.map(function (hourlyForecast, index) {
-            if (index > 0 && index < 6) {
+            if (index > 0 && index < 7) {
               return (
-                <div className="col" key={index}>
+                <div className="col-2" key={index}>
                   <Hour data={hourlyForecast} timezoneData={props.timezone} />
                 </div>
               );

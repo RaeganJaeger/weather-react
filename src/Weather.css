@@ -8,7 +8,12 @@
   background-color: #fff;
 }
 
-.Weather button {
+.Weather h2 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.Weather .search-button {
   border-radius: 5px;
   margin: 0 auto;
   color: #fff;
@@ -19,12 +24,12 @@
   text-align: center;
 }
 
-.Weather button:hover {
+.Weather .search-button:hover {
   color: #000;
   background-color: #fff;
   font-weight: bolder;
 }
 
-.forecast-grid {
-  padding-top: 30px;
+.Weather .weather-info {
+  padding-bottom: 30px;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import HourlyForecast from "./HourlyForecast";
+import Accordion from "react-bootstrap/Accordion";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -51,22 +52,36 @@ export default function Weather(props) {
             autoFocus="on"
             onChange={handleCityChange}
           />{" "}
-          <button type="submit" value="Search">
+          <button className="search-button" type="submit" value="Search">
             Search
           </button>
         </form>
+        <div className="weather-info">
+          <WeatherInfo data={weatherData} />
+        </div>
+        <Accordion>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              <h2>Hourly Forecast</h2>
+            </Accordion.Header>
+            <Accordion.Body>
+              <HourlyForecast
+                coordinates={weatherData.coordinates}
+                data={weatherData}
+                timezone={weatherData.timezone}
+              />
+            </Accordion.Body>
+          </Accordion.Item>
 
-        <WeatherInfo data={weatherData} />
-        <div className="hourly-grid">
-          <HourlyForecast
-            coordinates={weatherData.coordinates}
-            data={weatherData}
-            timezone={weatherData.timezone}
-          />
-        </div>
-        <div className="forecast-grid">
-          <WeatherForecast coordinates={weatherData.coordinates} />
-        </div>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>
+              <h2>Weekly Forecast</h2>
+            </Accordion.Header>
+            <Accordion.Body>
+              <WeatherForecast coordinates={weatherData.coordinates} />
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </div>
     );
   } else {
