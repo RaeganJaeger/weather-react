@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import "./Hour.css";
 
 export default function Hour(props) {
   function hourlyTemp() {
@@ -21,6 +22,7 @@ export default function Hour(props) {
     let currentUtcTime = new Date();
     let currentUtcHours = currentUtcTime.getUTCHours();
     let timezone = props.timezoneData / 3600;
+    let meridianLabel = "";
     //console.log(timezone);
 
     let currentTime = currentUtcHours + timezone;
@@ -51,12 +53,14 @@ export default function Hour(props) {
       adjustedCurrentTime + 11,
       adjustedCurrentTime + 12,
     ];
-    return futureHours[hours];
+    return futureHours[hours] + `${meridianLabel}`;
   }
 
-  function displayHourlyTime() {
-    return timezoneHour();
-  }
+  //    if (futureHours < 12) {
+  //      meridianLabel = "pm";
+  //    } else {
+  //      meridianLabel = "am";
+  //    }
 
   // get current local time
   // add hours based on {hours}
@@ -64,7 +68,7 @@ export default function Hour(props) {
 
   return (
     <div className="WeatherHour">
-      <div className="WeatherHour">{displayHourlyTime()}</div>
+      <div className="WeatherHour">{timezoneHour()}</div>
       <WeatherIcon code={props.data.weather[0].icon} size={20} />
       <div className="WeatherHour-temps">
         <span className="WeatherHour-temp-max">{hourlyTemp()}°</span>

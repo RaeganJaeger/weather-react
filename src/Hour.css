@@ -1,0 +1,12 @@
+.HourlyForecast {
+  text-align: center;
+  font-family: "Varela Round", Sans-Serif;
+}
+
+.WeatherHour {
+  font-size: 1rem;
+}
+
+.WeatherHour-temps {
+  font-size: 0.75rem;
+}
